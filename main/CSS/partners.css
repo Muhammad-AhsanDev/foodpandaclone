@@ -50,6 +50,23 @@ li:hover{
     margin-bottom: 40px;
     font-weight: 700;
 }
+    .chooselacation{
+                background-color: #ff2f7d;   /* pink color */
+        color: #ffffff;
+        border: none;
+       
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;        /* pill shape */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+    }
+.chooselacation:hover{
+     background-color: #e0266d;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(255, 47, 125, 0.45);
+}
 
 /* Common Components */
 .btn-pink {
@@ -67,7 +84,7 @@ li:hover{
 /* Hero Section */
 .hero {
     height: 500px;
-    background-image: url('../images/image\ copy\ 2.png'); /* Replace with actual hero image */
+    background-image: url('../young-people-enjoying-street-food.jpg'); /* Replace with actual hero image */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -178,10 +195,10 @@ li:hover{
 }
 
 /* Placeholder card backgrounds */
-.card-bg-1 { background-image: url('https://via.placeholder.com/300x500'); }
-.card-bg-2 { background-image: url('https://via.placeholder.com/300x500'); }
-.card-bg-3 { background-image: url('https://via.placeholder.com/300x500'); }
-.card-bg-4 { background-image: url('https://via.placeholder.com/300x500'); }
+.card-bg-1 { background-image: url('../images/image\ copy\ 52.png'); }
+.card-bg-2 { background-image: url('../images/image\ copy\ 51.png'); }
+.card-bg-3 { background-image: url('../images/image\ copy\ 48.png'); }
+.card-bg-4 { background-image: url('../images/image\ copy\ 10.png'); }
 
 .card-overlay {
     position: absolute;
@@ -268,3 +285,40 @@ li:hover{
         font-size: 32px;
     }
 }
+
+.Main-footer{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.Main-footer ul li{
+    text-decoration: none;
+    list-style: none;
+    font-family:  serif;
+}
+.Main-footer ul {
+    padding-left: 0%;
+}
+  .social-container {
+      color: #fff;
+      
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .social-container span {
+      font-size: 16px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 22px;
+      margin-right: 12px;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.7;
+    }

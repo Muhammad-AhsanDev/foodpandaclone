@@ -1,0 +1,626 @@
+/* --- Variables & Reset --- */
+:root {
+    --panda-pink: #fd92bf;
+    --panda-pink-hover: #ff8dbe;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --white: #ffffff;
+    --bg-gray: #f7f7f7;
+    --border-color: #e5e5e5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- Layout Components --- */
+nav{
+    display: flex;
+    justify-content:space-around;
+    padding-top: 10px;
+    align-items:baseline;
+}
+.navlsit{
+    margin-left: 150px;
+    display: flex;
+    gap: 20px;
+}
+.navlsit{
+    text-decoration: none;
+    list-style: none;
+    font-weight:550;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li:hover{
+    text-decoration: underline rgb(255, 0, 200) 2px;
+}
+.navlink{
+      text-decoration: none;
+    list-style: none;
+    font-weight:700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    font-size: 15px;
+}
+  .chooselacation{
+                background-color: #ff2f7d;   /* pink color */
+        color: #ffffff;
+        border: none;
+       
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;        /* pill shape */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+    }
+.chooselacation:hover{
+     background-color: #e0266d;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(255, 47, 125, 0.45);
+}
+/* --- Buttons --- */
+.btn-primary {
+    background-color: var(--panda-pink);
+    color: var(--white);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--panda-pink-hover);
+}
+
+/* --- Hero --- */
+.hero {
+    background-color: var(--panda-pink);
+    color: var(--white);
+    padding: 100px 5%;
+    text-align: center;
+    box-shadow: #333333 1px 1px 1px ;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.search-bar {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 15px;
+    outline: none;
+    font-size: 1rem;
+    border-right: 1px solid var(--border-color);
+}
+
+.btn-search {
+    background: var(--panda-pink);
+    color: white;
+    border: none;
+    padding: 0 40px;
+    border-radius: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.foodpanda-section {
+    width: 100%;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Text Section Styles */
+.text-content {
+    flex: 1.2;
+}
+
+.title {
+    color: #ff2b85;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #333333;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Button & Mascot Styles */
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.panda-mascot {
+    position: absolute;
+    width: 65px;
+    top: -42px;
+    left: 10px;
+    z-index: 2;
+}
+
+.custom-button {
+    display: inline-block;
+    background-color: #ff2b85;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 16px 45px;
+    border-radius: 50px;
+    border: 2.5px solid #000000;
+    /* This creates the exact 3D black bottom effect */
+    box-shadow: 0px 5px 0px #000000; 
+    transition: all 0.1s ease;
+}
+
+.custom-button:hover {
+    background-color: #e62677;
+}
+
+.custom-button:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 0px #000000;
+}
+
+/* Image Section Styles */
+.image-content {
+    flex: 1;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pink-backdrop {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    bottom: -20px;
+    left: 40px;
+    background-color: #fbc6d9; /* The light pink background shape */
+    border-radius: 40px;
+    z-index: 1;
+}
+
+.team-photo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-radius: 30px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .panda-mascot {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.stats-section {
+    background-color: #f7a7c4; /* The specific pink background */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #333;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Grid for the 4 cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* The white outline around the card */
+.card-outline {
+    border: 3px solid #ffffff;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+/* The white inner card */
+.card {
+    background-color: #ffffff;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.number {
+    color: #ff2b85;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.label {
+    color: #ff2b85;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* Mascot sizing and positioning */
+.mascot-container {
+    flex: 1;
+}
+
+.mascot-img {
+    max-width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .stats-grid {
+        order: 2;
+    }
+    
+    .mascot-container {
+        order: 1;
+    }
+}
+
+
+.roles-section {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    color: #ff2b85;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 80px; /* Space for the overlapping logo circles */
+}
+
+/* Roles Layout */
+.roles-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Card Styling */
+.role-card {
+    flex: 1;
+    position: relative;
+    background: #fff;
+    border: 2px solid #ff2b85;
+    border-radius: 12px;
+    padding: 60px 30px 40px; /* High top padding for the circle */
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+/* Circular Logo at Top */
+.logo-circle {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    background: white;
+    border: 1px solid #ff2b85;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo-circle img {
+    width: 50px;
+}
+
+/* Favorite Star */
+.favorite-star {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ff2b85;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.role-title {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: auto; /* Pushes content below to bottom */
+}
+
+.location {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.pin-icon {
+    color: #ff2b85;
+    margin-right: 5px;
+}
+
+/* Button Styling */
+.read-more-btn {
+    display: block;
+    background-color: #ff2b85;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 0;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+.read-more-btn:hover {
+    background-color: #e02070;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .roles-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px; /* Extra gap for the logos */
+    }
+    
+    .role-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.blog-section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: #ff2b85;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.blog-grid {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Card Design */
+.blog-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.category {
+    color: #ff2b85;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.post-excerpt {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Footer & Links */
+.card-footer {
+    margin-top: auto;
+    text-align: right;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.read-more:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* View All Button */
+.view-all-container {
+    text-align: center;
+}
+
+.view-all-btn {
+    display: inline-block;
+    background-color: #ff2b85;
+    color: white;
+    text-decoration: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.view-all-btn:hover {
+    background-color: #e02070;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .blog-grid {
+        flex-direction: column;
+    }
+}
+
+
+.Main-footer{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.Main-footer ul li{
+    text-decoration: none;
+    list-style: none;
+    font-family:  serif;
+}
+.Main-footer ul {
+    padding-left: 0%;
+}
+  .social-container {
+      color: #fff;
+      
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .social-container span {
+      font-size: 16px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 22px;
+      margin-right: 12px;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.7;
+    }

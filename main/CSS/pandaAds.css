@@ -1,0 +1,765 @@
+
+*{
+   margin: 0%;
+   padding: 0%;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      color: #000;
+      background: #fff;
+      line-height: 1.5;
+    }
+
+    /* =====================
+       NAVBAR PLACEHOLDER
+    ====================== */
+  nav{
+    display: flex;
+    justify-content:space-around;
+    padding-top: 10px;
+    align-items:baseline;
+}
+.navlsit{
+    margin-left: 150px;
+    display: flex;
+    gap: 20px;
+}
+.navlsit{
+    text-decoration: none;
+    list-style: none;
+    font-weight:550;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li:hover{
+    text-decoration: underline rgb(255, 0, 200) 2px;
+}
+.navlink{
+      text-decoration: none;
+    list-style: none;
+    font-weight:700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+    .chooselacation{
+                background-color: #ff2f7d;   /* pink color */
+        color: #ffffff;
+        border: none;
+       
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 50px;        /* pill shape */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+    }
+.chooselacation:hover{
+     background-color: #e0266d;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(255, 47, 125, 0.45);
+}
+
+    /* =====================
+       GENERAL CONTAINER
+    ====================== */
+    .container {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    /* =====================
+       HERO SECTION
+    ====================== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--gray);
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .hero-image {
+      background: #ddd;
+      height: 360px;
+      border-radius: 16px;
+    }
+
+    /* =====================
+       STATS SECTION
+    ====================== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .stat h2 {
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+
+    .stat p {
+      color: var(--gray);
+    }
+
+    /* =====================
+       FEATURES
+    ====================== */
+    .features {
+      background: var(--light);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .feature .icon {
+      width: 50px;
+      height: 50px;
+      
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+    .icon img{
+         width: 80px;
+      height: 80px;
+      background: #ddd;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      
+    }
+
+    /* =====================
+       SOLUTIONS
+    ====================== */
+/* --- Layout Container --- */
+.solutions-section {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Typography --- */
+.main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 80px;
+    color: #000;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 24px;
+    max-width: 480px;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    display: inline-block;
+    background-color: #D70F64; /* Foodpanda Pink */
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #b00c52;
+}
+
+/* --- Row Layout (Flexbox) --- */
+.solution-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+/* Used to flip text to left, image to right */
+.solution-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.col-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-media img {
+    max-width: 100%;
+    height: auto;
+    /* This creates a placeholder gray box if no image is present */
+    min-height: 300px; 
+    background-color: #f0f0f0; 
+    border-radius: 8px;
+}
+
+.col-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ensure text aligns correctly depending on side */
+.solution-row .col-text {
+    align-items: flex-start;
+}
+
+
+/* --- Comparison Table Widget Styling --- */
+.comparison-table {
+    width: 100%;
+    max-width: 550px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    font-size: 0.85rem;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background-color: #D70F64;
+    color: white;
+    padding: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.th-label {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.td-label {
+    font-weight: 600;
+    color: #333;
+    padding-left: 10px;
+}
+
+.td-icon {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.check { color: #D70F64; opacity: 0.7; } /* Generic check */
+.check-pink { color: #D70F64; } /* Panda check */
+.cross { color: #333; opacity: 0.8; }
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .solution-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .solution-row.reverse {
+        flex-direction: column;
+    }
+
+    .col-text {
+        align-items: center !important;
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+    /* =====================
+       CASE STUDIES
+    ====================== */
+/* --- Section Base --- */
+.proven-impact-section {
+    background-color: #F7F7F7; /* Light gray background from screenshot */
+    padding: 80px 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Section Heading --- */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+/* --- Grid Layout --- */
+.cards-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* --- Card Styles --- */
+.impact-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden; /* Ensures image corners get clipped */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px; /* Prevents cards from getting too squished */
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+/* --- Card Image --- */
+.card-image {
+    width: 100%;
+    height: 220px; /* Fixed height for uniformity */
+    background-color: #e0e0e0; /* Placeholder color if image fails */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills space without stretching */
+    display: block;
+}
+
+/* --- Card Content --- */
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between; /* Pushes button to bottom */
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* --- Button --- */
+.btn-read-more {
+    display: inline-block;
+    background-color: #FF2B85; /* Bright Pink */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    align-self: flex-start; /* Aligns button left */
+    transition: background-color 0.3s ease;
+}
+
+.btn-read-more:hover {
+    background-color: #d61c6b;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .cards-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .impact-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+    /* =====================
+       TESTIMONIALS
+    ====================== */
+/* --- Testimonials Section --- */
+.testimonials-section {
+    background-color: #fff; /* White background to contrast with previous gray section */
+    padding: 80px 20px;
+}
+
+/* Re-using .section-title and .container from previous code */
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border: 1px solid #eee; /* Subtle border */
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-color: #fadce9; /* Subtle pink border on hover */
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: #FF2B85; /* Panda Pink */
+    font-family: serif;
+    line-height: 1;
+    margin-bottom: 10px;
+    opacity: 0.3;
+}
+
+.quote-text {
+    font-size: 1rem;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #eee;
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-details h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.author-details span {
+    font-size: 0.85rem;
+    color: #777;
+    display: block;
+}
+
+/* --- Back to Top Button --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #FF2B85; /* Panda Pink */
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px; /* Slightly rounded square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #d61c6b;
+    transform: translateY(-3px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial-card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+/* --- CTA Banner Section --- */
+.cta-banner-section {
+    background-color: #FFF0F5; /* Very light pink background */
+    padding: 60px 20px;
+}
+
+.cta-box {
+    background-color: #ffffff00;
+    border-radius: 50px; /* Creates the pill shape */
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    max-width: 900px;
+    margin: 0 auto; /* Centers the box */
+}
+
+.cta-box h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+}
+
+/* Re-using .btn-primary from your first section, 
+   but ensuring specific margin if needed */
+.cta-box .btn-primary {
+    background-color: #FF2B85;
+    padding: 12px 30px;
+    white-space: nowrap; /* Prevents button text wrapping */
+}
+
+.cta-box .btn-primary:hover {
+    background-color: #d61c6b;
+}
+
+/* --- Brands Section --- */
+.brands-section {
+    background-color: #fff;
+    padding: 60px 20px 80px 20px;
+    text-align: center;
+}
+
+.brands-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 60px; /* Row gap 40px, Column gap 60px */
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
+.logo-grid img {
+    height: 35px; /* Fixed height ensures uniformity */
+    width: auto;
+    object-fit: contain;
+    
+    /* This makes any colored logo look like the screenshot (Grey) */
+    filter: grayscale(100%); 
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Make logos colored on hover */
+.logo-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.disclaimer {
+    font-size: 0.65rem;
+    color: #aaa;
+    margin-top: 40px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    /* Stack the CTA banner on mobile */
+    .cta-box {
+        flex-direction: column;
+        border-radius: 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .cta-box h2 {
+        font-size: 1.3rem;
+    }
+
+    /* Adjust logo sizing for mobile */
+    .logo-grid {
+        gap: 30px;
+    }
+
+    .logo-grid img {
+        height: 25px;
+    }
+}
+
+.Main-footer{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.Main-footer ul li{
+    text-decoration: none;
+    list-style: none;
+    font-family:  serif;
+}
+.Main-footer ul {
+    padding-left: 0%;
+}
+  .social-container {
+      color: #fff;
+      
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .social-container span {
+      font-size: 16px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 22px;
+      margin-right: 12px;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.7;
+    }
+
+
+    /* =====================
+       RESPONSIVE
+    ====================== */
+    @media (max-width: 900px) {
+      .hero,
+      .solutions-grid,
+      .solution {
+        grid-template-columns: 1fr;
+      }
+
+      .stats,
+      .features-grid,
+      .cards,
+      .testimonial-grid,
+      .brand-logos {
+        grid-template-columns: 1fr;
+      }
+    }

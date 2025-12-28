@@ -219,3 +219,76 @@ li:hover{
     .social-icons a:hover {
       opacity: 0.7;
     }
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.values-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.values-title {
+    font-size: 42px;
+    color: #333d47; /* Dark slate grey as seen in image */
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.values-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Vertical spacing between rows */
+    align-items: center;
+}
+
+.value-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Horizontal spacing between pills */
+}
+
+/* Base Pill Styling */
+.pill {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Specific Pill Variants */
+.black-pill {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+.outline-pill {
+    background-color: #ffffff;
+    color: #ff2b85;
+    border: 2px solid #ff2b85;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+    .pill {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    
+    .values-title {
+        font-size: 32px;
+    }
+}
